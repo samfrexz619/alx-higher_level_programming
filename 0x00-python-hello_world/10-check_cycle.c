@@ -16,7 +16,7 @@ int check_cycle(listint_t *list)
 		list = list->next;
 		r2 = r2->next->next;
 
-		if (list == p2)
+		if (list == r2)
 		{
 			list = pv;
 			pv = r2;
