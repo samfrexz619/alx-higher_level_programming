@@ -9,6 +9,7 @@ def subtract(num):
 
     return (max_ls - sub)
 
+
 def roman_to_int(roman_string):
     if not roman_string:
         return 0
@@ -34,5 +35,5 @@ def roman_to_int(roman_string):
                 l_rom = rom_num.get(c)
 
         num += subtract(ls_num)
-        return (num)
 
+        return (num)
