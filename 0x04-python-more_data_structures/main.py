@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-search_replace = __import__('1-search_replace').search_replace
+multiply_by_2 = __import__('9-multiply_by_2').multiply_by_2
+print_sorted_dictionary = \
+    __import__('6-print_sorted_dictionary').print_sorted_dictionary
 
-my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
-new_list = search_replace(my_list, 2, 89)
-
-print(new_list)
-print(my_list)
+a_dictionary = {'John': 12, 'Alex': 8, 'Bob': 14, 'Mike': 14, 'Molly': 16}
+new_dict = multiply_by_2(a_dictionary)
+print_sorted_dictionary(a_dictionary)
+print("--")
+print_sorted_dictionary(new_dict)
