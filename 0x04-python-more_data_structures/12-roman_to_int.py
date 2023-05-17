@@ -34,6 +34,6 @@ def roman_to_int(roman_string):
                     ls_num.append(rom_num.get(c))
                 l_rom = rom_num.get(c)
 
-        num += subtract(ls_num)
+    num += subtract(ls_num)
 
-        return (num)
+    return (num)
