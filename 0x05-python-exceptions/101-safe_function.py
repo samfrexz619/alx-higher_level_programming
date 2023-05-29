@@ -7,4 +7,5 @@ def safe_function(fct, *args):
     except Exception as idx:
         sys.stderr.write("Exception: {}\n".format(idx))
         res = None
-    return (result)
+
+    return (res)
