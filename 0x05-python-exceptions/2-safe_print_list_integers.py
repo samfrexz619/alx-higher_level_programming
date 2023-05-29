@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    sliced_list = my_list[:x]
 
-    for idx in sliced_list:
+    for idx in range(x):
         try:
-            print(f'{idx:d}', end='')
+            print(f'{my_list[idx]:d}', end='')
         except TypeError:
             pass
         except ValueError:
-            pass
+            continue
         else:
             count += 1
 
