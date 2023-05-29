@@ -6,7 +6,7 @@ def safe_print_list(my_list=[], x=0):
     for idx in sliced_list:
         try:
             print('{}'.format(idx), end='')
-        except:
+        except Exception:
             break
         else:
             count += 1
