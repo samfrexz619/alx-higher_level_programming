@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
 
     for idx in sliced_list:
         try:
-            print(f'{idx}', end='')
+            print('{}'.format(idx), end='')
         except:
             break
         else:
