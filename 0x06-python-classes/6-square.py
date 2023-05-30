@@ -4,18 +4,10 @@
 
 class Square:
     '''class that defines a square size'''
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         '''method to init square obj'''
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = size
-
-    def area(self):
-        '''method that returns the sq of the obj'''
-        return (self.__size ** 2)
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
