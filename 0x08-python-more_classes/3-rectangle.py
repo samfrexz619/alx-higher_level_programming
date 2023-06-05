@@ -3,6 +3,7 @@
     this module is a class that defines a Rectangle
 '''
 
+
 class Rectangle:
     '''this class defines a rectangle'''
 
