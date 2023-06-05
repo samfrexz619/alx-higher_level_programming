@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 '''
-
     this module is a class that defines a Rectangle
-
 '''
-
 
 class Rectangle:
     '''this class defines a rectangle'''
@@ -80,3 +77,44 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
+
+    def area(self):
+        '''method to calc the area of rectangle
+
+        Returns:
+            rectangle area
+
+        '''
+
+        return self.width * self.height
+
+    def perimeter(self):
+        '''method to calc rectangle perimeter
+
+        Returns:
+            reactangle perimeter
+
+        '''
+
+        if self.width == 0 or self.height == 0:
+            return 0
+
+        return (2 * self.width) + (2 * self.height)
+
+    def __str__(self):
+        '''method to ret rect
+
+        Returns:
+            str of rect
+
+        '''
+
+        rect = ''
+
+        if self.width == 0 or self.height == 0:
+            return rect
+
+        for idx in range(self.height):
+            rect += ('#' * self.width) + '\n'
+
+        return rect[:-1]
