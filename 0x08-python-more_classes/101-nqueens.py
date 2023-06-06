@@ -5,7 +5,7 @@
 '''
 
 
-def is_safe(pos_queen, nqueen):
+def safe(pos_queen, nqueen):
     ''' method to det if the queen can or cant kill each other
 
         Args:
@@ -46,4 +46,60 @@ def print_res(pos_queen, nqueen):
     print(res)
 
 
-def 
+def back_track(pos_queen, nqueen):
+    '''function to exec the backtracking algo
+
+    Args:
+        pos_queen: arr that has the queens pos
+        mqueen: queen num
+
+    '''
+
+    if nqueen is len(pos_queen):
+        print_res(pos_queen, nqueen)
+        return
+
+    pos_queen[nqueen] = -1
+
+    while((pos_queen[nqueen] < len(pos_queen) - 1)):
+
+        pos_queen[nqueen] += 1
+
+        if safe(pos_queen, nqueen) is True:
+
+            if nqueen is not len(pos_queen):
+                back_track(pos_queen, nqueen + 1)
+
+
+def solve_queen(size):
+    '''function to invoke the backtracking algo
+
+    Arg:
+        size: chessboard size
+
+    '''
+
+    pos_queen = [-1 for idx in range(size)]
+
+    back_track(pos_queen, 0)
+
+
+if __name__ == '__main__':
+
+    import sys
+
+    if len(sys.argv) == 1 or len(sys.argv) > 2:
+        print('Usage: nqueens N')
+        sys.exit(1)
+
+    try:
+        size = int(sys.argv[1])
+    except:
+        print('N must be a number')
+        sys.exit(1)
+
+    if size < 4:
+        print('N must be at least 4')
+        sys.exit(1)
+
+    solve_queen(size)
