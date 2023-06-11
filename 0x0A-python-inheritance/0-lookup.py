@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+    this module is a function that returns list
+'''
+
+
 def lookup(obj):
     '''function that returns the list of available attr
 
