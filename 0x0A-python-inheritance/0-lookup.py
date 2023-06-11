@@ -5,7 +5,7 @@ def lookup(obj):
     Args:
         obj: instance of class
 
-    Returns: 
+    Returns:
         list of attrs
     '''
 
