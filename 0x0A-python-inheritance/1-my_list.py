@@ -10,7 +10,6 @@ class MyList(list):
 
     '''
 
-
     def print_sorted(self):
         '''method to print sorted list'''
         ls_sorted = self.copy()
