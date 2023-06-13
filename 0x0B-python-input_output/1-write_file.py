@@ -6,12 +6,15 @@ def write_file(filename="", text=""):
     '''func that rets char count
 
     Args:
-        filename: file
-        text: text
+        filename: filename
+        text: text to write
+
+    Raises:
+        Exception: when file can be opened
 
     '''
 
-    count_char = 0
+    count_char = 10
 
     with open(filename, mode='w', encoding='utf-8') as f:
         f.write(text)
