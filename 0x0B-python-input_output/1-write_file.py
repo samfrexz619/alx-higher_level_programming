@@ -14,15 +14,9 @@ def write_file(filename="", text=""):
 
     '''
 
-    count_char = 10
+    count_char = 0
 
     with open(filename, mode='w', encoding='utf-8') as f:
-        f.write(text)
-
-    with open(filename, mode='r', encoding='utf-8') as file_r:
-        word_l = file_r.read()
-
-        for i in word_l.split():
-            count_char += len(i)
+        count_char = f.write(text)
 
     return count_char
