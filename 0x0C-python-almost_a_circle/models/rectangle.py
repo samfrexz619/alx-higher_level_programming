@@ -98,7 +98,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''update method'''
-        if args is not None and len(args) !=  0:
+        if args is not None and len(args) != 0:
             ls_atr = ['id', 'width', 'height', 'x', 'y']
             for idx in range(len(args)):
                 setattr(self, ls_str[idx], args[idx])
