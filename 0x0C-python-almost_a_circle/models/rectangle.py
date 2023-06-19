@@ -82,7 +82,7 @@ class Rectangle(Base):
         '''displays a rect'''
         rect = self.y * '\n'
         for idx in range(self.height):
-            rect += ('' * self.x)
+            rect += (' ' * self.x)
             rect += ('#' * self.width) + '\n'
 
         print(rect, end='')
