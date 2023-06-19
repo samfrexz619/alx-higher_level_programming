@@ -5,6 +5,8 @@ import json
 import csv
 import os.path
 
+'''base class'''
+
 
 class Base:
     '''class Base'''

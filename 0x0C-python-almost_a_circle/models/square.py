@@ -3,9 +3,11 @@
 
 from models.rectangle import Rectangle
 
+''''sqaure class'''
+
 
 class Square(Rectangle):
-    '''class Rectangle'''
+    '''class square'''
 
     def __init__(self, size, x=0, y=0, id=None):
         '''init instances'''

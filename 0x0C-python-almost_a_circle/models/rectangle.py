@@ -4,6 +4,8 @@
 
 from models.base import Base
 
+'''rectangle class'''
+
 
 class Rectangle(Base):
     '''class Rectangle'''
