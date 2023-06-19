@@ -63,7 +63,7 @@ class TestBaseMethods(unittest.TestCase):
 
     def test_save_to_file_1(self):
         """ Test JSON file """
-        Square.save_to_file(None)
+        Square.save_to_file_csv(None)
         res = "[]\n"
         with open("Square.json", "r") as file:
             with patch('sys.stdout', new=StringIO()) as str_out:
@@ -81,7 +81,7 @@ class TestBaseMethods(unittest.TestCase):
 
     def test_save_to_file_2(self):
         """ Test JSON file """
-        Rectangle.save_to_file(None)
+        Rectangle.save_to_file_csv(None)
         res = "[]\n"
         with open("Rectangle.json", "r") as file:
             with patch('sys.stdout', new=StringIO()) as str_out:
@@ -92,6 +92,6 @@ class TestBaseMethods(unittest.TestCase):
         except:
             pass
 
-        Rectangle.save_to_file([])
+        Rectangle.save_to_file_csv([])
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
