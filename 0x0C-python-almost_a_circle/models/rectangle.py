@@ -21,7 +21,6 @@ class Rectangle(Base):
         '''width getter'''
         return self.__width
 
-
     @width.setter
     def width(self, val):
         '''width setter'''
@@ -105,7 +104,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    def to_dict(self):
+    def to_dictionary(self):
         '''method to ret a dict with properties'''
         ls_atr = ['id', 'width', 'height', 'x', 'y']
         d_res = {}
