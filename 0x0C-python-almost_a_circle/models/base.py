@@ -30,7 +30,7 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
-    def save_to_file(cls, list_objs):
+    def save_to_file_csv(cls, list_objs):
         '''save obj in a file'''
         f_name = f'{cls.__name__}.json'
         ls_dic = []
@@ -64,7 +64,7 @@ class Base:
         return nw
 
     @classmethod
-    def load_from_file(cls):
+    def load_from_file_csv(cls):
         '''ret a list of instance'''
         f_name = f'{cls.__name__}.json'
 
