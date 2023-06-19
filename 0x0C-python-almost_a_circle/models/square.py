@@ -16,8 +16,8 @@ class Square(Rectangle):
     def __str__(self):
         '''str method'''
         str_squ = '[Square] '
-        str_id = f'({self.id})'
-        str_xy = f'{self.x}/{self.y}'
+        str_id = f'({self.id}) '
+        str_xy = f'{self.x}/{self.y} - '
         str_wh = f'{self.width}/{self.height}'
 
         return str_squ + str_id + str_xy + str_wh
@@ -36,15 +36,14 @@ class Square(Rectangle):
     def __str__(self):
         '''str method'''
         str_rect = '[Square] '
-        str_id = f'({self.id})'
-        str_xy = f'{self.x}/{self.y}'
+        str_id = f'({self.id}) '
+        str_xy = f'{self.x}/{self.y} - '
         str_sz = f'{self.size}'
-
         return str_rect + str_id + str_xy + str_sz
 
     def update(self, *args, **kwargs):
         '''update method'''
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             ls_atr = ['id', 'size', 'x', 'y']
             for idx in range(len(args)):
                 if ls_atr[idx] == 'size':
