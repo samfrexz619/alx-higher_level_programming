@@ -101,7 +101,7 @@ class Rectangle(Base):
         if args is not None and len(args) != 0:
             ls_atr = ['id', 'width', 'height', 'x', 'y']
             for idx in range(len(args)):
-                setattr(self, ls_str[idx], args[idx])
+                setattr(self, ls_atr[idx], args[idx])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
