@@ -89,7 +89,7 @@ class Rectangle(Base):
 
     def __str__(self):
         '''str method'''
-        str_rect = '[Rectangle]'
+        str_rect = '[Rectangle] '
         str_id = f'({self.id}) '
         str_xy = f'{self.x}/{self.y} - '
         str_wh = f'{self.width}/{self.height}'
