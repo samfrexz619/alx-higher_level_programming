@@ -44,7 +44,7 @@ class Rectangle(Base):
             raise TypeError('height must be an integer')
         if val <= 0:
             raise ValueError('height must be > 0')
-        self.__height = value
+        self.__height = val
 
     @property
     def x(self):
@@ -98,7 +98,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''update method'''
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) !=  0:
             ls_atr = ['id', 'width', 'height', 'x', 'y']
             for idx in range(len(args)):
                 setattr(self, ls_str[idx], args[idx])

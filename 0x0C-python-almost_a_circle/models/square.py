@@ -15,7 +15,7 @@ class Square(Rectangle):
 
     def __str__(self):
         '''str method'''
-        str_squ = '[Square]'
+        str_squ = '[Square] '
         str_id = f'({self.id})'
         str_xy = f'{self.x}/{self.y}'
         str_wh = f'{self.width}/{self.height}'
