@@ -6,22 +6,22 @@
  */
 void reverse_list(listint_t **hd)
 {
-	listint_t *prev;
-	listint_t cur;
+	listint_t *pv;
+	listint_t cu;
 	listint_t nxt;
 
-	prev = NULL;
-	cur = *hd;
+	pv = NULL;
+	cu = *hd;
 
-	while (cur != NULL)
+	while (cu != NULL)
 	{
-		nxt = cur->next;
-		cur->next = prev;
-		prev = cur;
-		cur = nxt;
+		nxt = cu->next;
+		cu->next = pv;
+		pv = cu;
+		cu = nxt;
 	}
 
-	*hd = prev;
+	*hd = pv;
 }
 /**
  * compare_list - compares

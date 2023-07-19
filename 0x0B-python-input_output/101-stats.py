@@ -34,7 +34,7 @@ class Magic:
     def prnt_info(self, sig=0, frame=0):
         '''print status code'''
 
-        print("File size: {:d}".format(self.sz))
+        print(f'File size: {self.sz:d}')
         for idx in sorted(self.dic.keys()):
             if self.dic[idx] is not 0:
                 print(f'{idx}: {self.dic[idx]:d}')
