@@ -10,5 +10,10 @@ if __name__ == "__main__":
                          db=sys.argv[3], port=3306)
 
     cr = db.cursor()
-    cr.execute("SELECT * FROM states ORDER BY id")
-    [print(state) for state in cr.fetchall() if state[1][0] == "N"]
+    cur.execute("""SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY states.id""")
+    rows = cr.fetchall()
+    for row in rows:
+        print(row)
+    cr.close()
+    db.close()
