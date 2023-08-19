@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          db=sys.argv[3], port=3306)
 
     cr = db.cursor()
-    cur.execute("SELECT * \
+    cr.execute("SELECT * \
     FROM states \
     WHERE CONVERT(`name` USING Latin1) \
     COLLATE Latin1_General_CS \
