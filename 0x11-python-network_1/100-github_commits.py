@@ -12,7 +12,8 @@ if __name__ == "__main__":
         rq = get(url)
         json_o = rq.json()
         for idx in range(0, 10):
-            print("{}: {}".format(json_o[idx].get('sha'), json_o[idx].get('commit')
-                                  .get('author').get('name')))
+            print("{}: {}".format(
+                  json_o[idx].get('sha'), json_o[idx].get('commit')
+                  .get('author').get('name')))
     except Exception:
         pass
